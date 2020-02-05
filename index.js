@@ -5,7 +5,7 @@ async function run() {
   const myToken = core.getInput('repo-token');
   const octokit = new github.GitHub(myToken);
 
-  console.log('github context => ', github.context);
+  console.log('github context => ', github.event);
 
   const result = await octokit.request('POST /repos/:owner/:repo/issues/:issue_number/comments', {
     headers: {
