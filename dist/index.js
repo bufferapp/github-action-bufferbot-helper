@@ -192,20 +192,19 @@ async function run() {
   const myToken = core.getInput('repo-token');
   const octokit = new github.GitHub(myToken);
 
-  console.log('github context => ', github.context);
-  console.log('github context pr => ', github.context.pull_request);
+  console.log('github context pr => ', github.context.payload.pull_request.comments_url);
 
-  // const result = await octokit.request(`POST /repos/:owner/:repo/issues/:issue_number/comments`, {
-  //   headers: {
-  //     authorization: `token ${myToken}`,
-  //   },
-  //   // owner: 'hamstu',
-  //   // repo: 'testing',
-  //   // issue_number: github.event.number,
-  //   body: core.getInput('comment'),
-  // });
+  const result = await octokit.request(`POST ${github.context.payload.pull_request.comments_url}`, {
+    headers: {
+      authorization: `token ${myToken}`,
+    },
+    // owner: 'hamstu',
+    // repo: 'testing',
+    // issue_number: github.event.number,
+    body: 'Hello on your PR!',
+  });
 
-  // console.log(result.data);
+  console.log(result.data);
 }
 
 run();
