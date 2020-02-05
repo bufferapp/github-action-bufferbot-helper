@@ -239,8 +239,12 @@ async function run() {
   const body = `
 👋 Hey there! Here are some helpful links related to this PR / branch.
 
-* Staging URL: ${stagingUrl}.
-* Deployment Monitor URL: ${deployMonitorUrl}
+* Staging URL: ${stagingUrl}
+* Deployment Monitor URL: ${deployMonitorUrl} (*)
+
+_Remember, these won't work until the **bufferbotbrains/cicd-buffer-publish** check below is ✅_
+
+(*) Requires VPN.
   `;
 
   const result = await octokit.request(
