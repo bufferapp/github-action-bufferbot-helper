@@ -1,5 +1,5 @@
 {
-  "name": "github-action-pr-comment",
+  "name": "@bufferapp/github-action-bufferbot-helper",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hamstu/github-action-pr-comment.git"
+    "url": "git+https://github.com/bufferapp/github-action-bufferbot-helper.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hamstu/github-action-pr-comment/issues"
-  },
-  "homepage": "https://github.com/hamstu/github-action-pr-comment#readme",
+  "license": "MIT",
+  "homepage": "https://github.com/bufferapp/github-action-bufferbot-helper#readme",
   "dependencies": {
     "@actions/core": "^1.2.2",
     "@actions/github": "^2.1.0",
