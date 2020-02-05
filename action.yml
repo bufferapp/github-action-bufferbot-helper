@@ -1,13 +1,9 @@
-name: 'Comment on PR'
-description: 'Comment on a PR when it is created.'
+name: 'Bufferbot Helper'
+description: 'Comments on new PRs with helpful links.'
 inputs:
-  repo-token:  # id of input
+  repo-token:
     description: 'Token for GitHub repo'
     required: true
-  comment: 
-    description: 'The comment to leave'
-    required: false
-    default: 'This is the default comment'
 runs:
   using: 'node12'
   main: 'dist/index.js'
